@@ -1,0 +1,23 @@
+html,
+body,
+button,
+#button-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#button-wrapper {
+  display: grid;
+  grid-template: auto auto auto / 50%;
+  justify-content: center;
+}
+
+#button-wrapper > * {
+  margin: auto;
+}
+
+div#counter,
+button {
+  font-size: 5rem;
+}
