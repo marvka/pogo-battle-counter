@@ -9,7 +9,7 @@ button,
 
 #button-wrapper {
   display: grid;
-  grid-template: auto auto auto / 50%;
+  grid-template: repeat(3, auto) / 50%;
   justify-content: center;
 }
 
