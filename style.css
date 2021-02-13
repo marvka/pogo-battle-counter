@@ -21,3 +21,7 @@ div#counter,
 button {
   font-size: 5rem;
 }
+
+#counter {
+  font-family: monospace;
+}
