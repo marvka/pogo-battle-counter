@@ -7,6 +7,10 @@ button,
   margin: 0;
 }
 
+h1.title {
+  text-align: center;
+}
+
 #button-wrapper {
   display: grid;
   grid-template: repeat(3, auto) / 50%;
