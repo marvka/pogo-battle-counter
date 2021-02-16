@@ -25,7 +25,7 @@ const counter = (() => {
   };
 
   return { increase, decrease };
-}());
+})();
 
 const upButton = document.getElementById('up');
 const downButton = document.getElementById('down');
