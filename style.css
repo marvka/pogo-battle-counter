@@ -1,14 +1,14 @@
 html,
 body,
 button,
-#button-wrapper {
-  width: 100%;
+h1 {
   height: 100%;
   margin: 0;
 }
 
 h1.title {
   text-align: center;
+  padding: 1em;
 }
 
 #button-wrapper {
