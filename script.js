@@ -18,9 +18,10 @@ const counter = (() => {
 
   const decrease = () => {
     if (i === 0) {
-      return;
+      i = 3;
+    } else {
+      i--;
     }
-    i--;
     updateDisplay();
   };
 
