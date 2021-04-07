@@ -1,35 +1,54 @@
 const counter = (() => {
-  const counterDom = document.getElementById('counter');
-  let i = 0;
-  counterDom.textContent = '-';
-
-  const updateDisplay = () => {
-    if (i === 0) { counterDom.textContent = '-'; } else { counterDom.textContent = i; }
-  };
+  let count = 0;
 
   const increase = () => {
-    if (i === 3) {
-      i = 0;
+    if (count === 3) {
+      count = 0;
     } else {
-      i++;
+      count++;
     }
-    updateDisplay();
   };
 
   const decrease = () => {
-    if (i === 0) {
-      i = 3;
+    if (count === 0) {
+      count = 3;
     } else {
-      i--;
+      count--;
     }
-    updateDisplay();
   };
 
-  return { increase, decrease };
+  const getCount = () => count;
+
+  return { increase, decrease, getCount };
 })();
 
-const upButton = document.getElementById('up');
-const downButton = document.getElementById('down');
+const displayController = (() => {
+  const display = document.querySelector("#counter");
 
-upButton.addEventListener('click', counter.increase);
-downButton.addEventListener('click', counter.decrease);
+  const updateDisplay = () => {
+    display.textContent = counter.getCount();
+  };
+
+  return { updateDisplay };
+})();
+
+const eventController = (() => {
+  const upButton = document.querySelector("#pokeball-top");
+  const downButton = document.querySelector("#pokeball-bot");
+
+  function increase() {
+    counter.increase();
+    displayController.updateDisplay();
+  }
+
+  function decrease() {
+    counter.decrease();
+    displayController.updateDisplay();
+  }
+
+  upButton.addEventListener("mouseup", increase);
+  upButton.addEventListener("touchend", increase);
+
+  downButton.addEventListener("mouseup", decrease);
+  downButton.addEventListener("touchend", decrease);
+})();
