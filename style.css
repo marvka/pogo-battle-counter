@@ -17,7 +17,7 @@ header {
 }
 
 svg {
-  --size: 85%;
+  --size: 95%;
   width: var(--size);
   height: auto;
   overflow: visible;
