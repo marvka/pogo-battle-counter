@@ -1,3 +1,7 @@
+:root {
+  --header-shadow-color: #4479a9;
+  --header-color: #ffcc03;
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +16,13 @@ body {
 }
 
 header {
+  font-family: sans-serif;
+  font-size: 1.6em;
+  color: var(--header-color);
+  text-shadow: 0.1em 0.1em 0.2em var(--header-shadow-color),
+    -0.1em -0.1em 0.2em var(--header-shadow-color);
   text-align: center;
-  color: black;
+  /* white-space: nowrap; */
 }
 
 svg {
