@@ -36,12 +36,14 @@ const eventController = (() => {
   const upButton = document.querySelector("#pokeball-top");
   const downButton = document.querySelector("#pokeball-bot");
 
-  function increase() {
+  function increase(e) {
+    e.preventDefault();
     counter.increase();
     displayController.updateDisplay();
   }
 
-  function decrease() {
+  function decrease(e) {
+    e.preventDefault();
     counter.decrease();
     displayController.updateDisplay();
   }
